@@ -26,11 +26,13 @@ git clone https://github.com/nemesismj/DocumentandFolders.git
 
 3)Необходимо поднять MySQL базу со следующими учетными данными:
 
+Назвать схему database
+
 username root 
 
 password root
 
-//учетные данные вы можете поменять если не хотите создавать новый в application.properties
+//Данные вы можете поменять если не хотите создавать новый в application.properties
 
 
 4)Запускаем проект, **mvn spring-boot:run**
