@@ -1,29 +1,26 @@
-create table users
-(
-    username varchar(50)  not null primary key,
-    password varchar(200) not null,
-    enabled  boolean                 not null
-);
+INSERT INTO `database`.`users`
+(`username`,
+`email`,
+`enabled`,
+`firstname`,
+`lastname`,
+`password`)
+VALUES
+('admin',
+'admin@mail.ru',
+1,
+'admin',
+'admin',
+'$2a$04$Rav/a84q0v5FvE8LtI1xK.lv1fKnSguuEkUvHTt7lIna9n4P5M7SC');
 
-create table authorities
+INSERT INTO `database`.`authorities`
 (
-    id        int primary key auto_increment,
-    username  varchar(50) not null,
-    authority varchar(50) not null
-);
-DROP TABLE IF EXISTS file;
-create table file
+`authority`,
+`username`)
+VALUES
 (
-    file_name      varchar(100) not null primary key,
-    insertion_date timestamp               not null default current_timestamp(),
-    file_type      varchar(50)  not null,
-    user_uploader  varchar(50)  not null,
-    constraint fk_files_users foreign key (user_uploader) references users (username)
-);
-DROP TABLE IF EXISTS file_authority;
-create table file_authority
-(
-    id        int primary key auto_increment,
-    file_name varchar(100),
-    file_authority varchar(50),
-    constraint fk_files_authority foreign key (file_name) references file (file_name));
+'ROLE_ADMIN',
+'admin');
+
+
+

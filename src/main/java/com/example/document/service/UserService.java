@@ -56,7 +56,7 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         Authority authority = new Authority();
         authority.setUsername(user.getUsername());
-        authority.setAuthority("ROLE_ADMIN");
+        authority.setAuthority("ROLE_USER");
         Set<Authority> authorities = new HashSet<>();
         authorities.add(authority);
         user.setAuthorities(authorities);

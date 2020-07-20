@@ -175,3 +175,59 @@
 2020-07-20 14:09:01.265  INFO 13452 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
 2020-07-20 14:09:01.268  INFO 13452 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
 2020-07-20 14:09:01.270 DEBUG 13452 --- [http-nio-8080-exec-7] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 15:18:44.847  INFO 2188 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 2188 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 15:18:44.849 DEBUG 2188 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 15:18:44.850  INFO 2188 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 15:18:48.608  INFO 2188 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 4.054 seconds (JVM running for 4.77)
+2020-07-20 15:18:52.834  INFO 2188 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:18:53.204  INFO 2188 --- [http-nio-8080-exec-5] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:28:32.481  INFO 2188 --- [http-nio-8080-exec-2] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:28:32.836  INFO 2188 --- [http-nio-8080-exec-8] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:30:25.246  INFO 2188 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin123
+2020-07-20 15:30:25.283  INFO 2188 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin123
+2020-07-20 15:30:25.288  INFO 2188 --- [http-nio-8080-exec-4] c.e.document.service.DocumentService     : IN getDocuments - admin123 documents found by Username
+2020-07-20 15:30:25.296  INFO 2188 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin123, quantity 0
+2020-07-20 15:30:25.298  INFO 2188 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin123, quantity - 0
+2020-07-20 15:30:25.298 DEBUG 2188 --- [http-nio-8080-exec-4] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin123
+2020-07-20 15:32:45.640  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 21968 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 15:32:45.643 DEBUG 21968 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 15:32:45.643  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 15:32:49.593  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 4.315 seconds (JVM running for 5.256)
+2020-07-20 15:32:49.774  INFO 21968 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:32:49.999  INFO 21968 --- [http-nio-8080-exec-4] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:33:33.348  INFO 21968 --- [http-nio-8080-exec-3] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 15:33:33.384  INFO 21968 --- [http-nio-8080-exec-3] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 15:33:33.388  INFO 21968 --- [http-nio-8080-exec-3] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 15:33:33.399  INFO 21968 --- [http-nio-8080-exec-3] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 15:33:33.402  INFO 21968 --- [http-nio-8080-exec-3] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 15:33:33.403 DEBUG 21968 --- [http-nio-8080-exec-3] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 15:18:44.847  INFO 2188 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 2188 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 15:18:44.849 DEBUG 2188 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 15:18:44.850  INFO 2188 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 15:18:48.608  INFO 2188 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 4.054 seconds (JVM running for 4.77)
+2020-07-20 15:18:52.834  INFO 2188 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:18:53.204  INFO 2188 --- [http-nio-8080-exec-5] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:28:32.481  INFO 2188 --- [http-nio-8080-exec-2] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:28:32.836  INFO 2188 --- [http-nio-8080-exec-8] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:30:25.246  INFO 2188 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin123
+2020-07-20 15:30:25.283  INFO 2188 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin123
+2020-07-20 15:30:25.288  INFO 2188 --- [http-nio-8080-exec-4] c.e.document.service.DocumentService     : IN getDocuments - admin123 documents found by Username
+2020-07-20 15:30:25.296  INFO 2188 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin123, quantity 0
+2020-07-20 15:30:25.298  INFO 2188 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin123, quantity - 0
+2020-07-20 15:30:25.298 DEBUG 2188 --- [http-nio-8080-exec-4] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin123
+2020-07-20 15:32:45.640  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 21968 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 15:32:45.643 DEBUG 21968 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 15:32:45.643  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 15:32:49.593  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 4.315 seconds (JVM running for 5.256)
+2020-07-20 15:32:49.774  INFO 21968 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:32:49.999  INFO 21968 --- [http-nio-8080-exec-4] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 15:33:33.348  INFO 21968 --- [http-nio-8080-exec-3] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 15:33:33.384  INFO 21968 --- [http-nio-8080-exec-3] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 15:33:33.388  INFO 21968 --- [http-nio-8080-exec-3] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 15:33:33.399  INFO 21968 --- [http-nio-8080-exec-3] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 15:33:33.402  INFO 21968 --- [http-nio-8080-exec-3] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 15:33:33.403 DEBUG 21968 --- [http-nio-8080-exec-3] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 16:08:04.323  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 21968 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 16:08:04.323 DEBUG 21968 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 16:08:04.324  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 16:08:05.491  INFO 21968 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 1.21 seconds (JVM running for 2121.155)
