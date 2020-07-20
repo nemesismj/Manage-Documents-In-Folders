@@ -1,0 +1,177 @@
+2020-07-20 14:02:47.714  INFO 10216 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 10216 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 14:02:47.717 DEBUG 10216 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 14:02:47.717  INFO 10216 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 14:02:51.519  INFO 10216 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 4.097 seconds (JVM running for 4.815)
+2020-07-20 14:02:54.955  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 14:02:55.266  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 14:02:55.436  INFO 10216 --- [http-nio-8080-exec-5] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:10.622  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN PricingPage - visited Pricing Page
+2020-07-20 14:03:10.700  INFO 10216 --- [http-nio-8080-exec-5] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:32.426  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN ContactPage - visited Contact Page
+2020-07-20 14:03:32.498  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:32.902  INFO 10216 --- [http-nio-8080-exec-3] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:40.024  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:40.056  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:40.102  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:43.023  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.controller.UserController   : IN registerUser - visited RegisterPage
+2020-07-20 14:03:43.071  INFO 10216 --- [http-nio-8080-exec-5] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:43.083  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:43.110  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:52.079  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:52.110  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:52.129  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:03:54.706  INFO 10216 --- [http-nio-8080-exec-8] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:03:54.744  INFO 10216 --- [http-nio-8080-exec-8] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:03:54.748  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:03:54.758  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:03:54.761  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:03:54.762 DEBUG 10216 --- [http-nio-8080-exec-8] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 14:04:14.306  INFO 10216 --- [http-nio-8080-exec-1] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:14.310  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:04:14.312  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:04:14.323  INFO 10216 --- [http-nio-8080-exec-1] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:14.324  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:04:14.327  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.DocumentService     : IN getDocumentsByFolderA - 1 documents found by Folder
+2020-07-20 14:04:14.328  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:04:14.331  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.FolderService       : IN getFolderByPackage List of folders found by - packagename Basic Package, username admin, quantity 3
+2020-07-20 14:04:14.332  INFO 10216 --- [http-nio-8080-exec-1] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:04:14.334 DEBUG 10216 --- [http-nio-8080-exec-1] c.e.d.controller.FolderController        : IN getFolderById -  visited folder Basic Package
+2020-07-20 14:04:22.262  INFO 10216 --- [http-nio-8080-exec-3] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:22.266  INFO 10216 --- [http-nio-8080-exec-3] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:22.267  INFO 10216 --- [http-nio-8080-exec-3] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:04:22.270  INFO 10216 --- [http-nio-8080-exec-3] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:04:22.272  INFO 10216 --- [http-nio-8080-exec-3] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:04:22.273 DEBUG 10216 --- [http-nio-8080-exec-3] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 14:04:23.388  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:23.392  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:23.411  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN searchUsersByName User found by name 
+2020-07-20 14:04:23.413  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.FolderService       : IN quantityOfPackages - 3 documents found by username admin
+2020-07-20 14:04:23.414  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.FolderService       : IN quantityOfFolders - 3 documents found by username admin
+2020-07-20 14:04:23.416  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.DocumentService     : IN quantityOfDocuments - 1 documents found by username admin
+2020-07-20 14:04:23.416 DEBUG 10216 --- [http-nio-8080-exec-10] c.e.document.controller.MainController   : IN search - found users 9
+2020-07-20 14:04:31.283  INFO 10216 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:04:31.286 DEBUG 10216 --- [http-nio-8080-exec-4] c.e.document.controller.UserController   : Edit done admin
+2020-07-20 14:05:08.166  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN getAllUsersUsernames [admin, adminavt, kek, keks, new, test, tester, testsss, zxc] users found
+2020-07-20 14:05:08.259  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN saveUser user saved successfully User{username='admin', password='$2a$10$liAxadZpoq7NhoB1uZNJnu6lykHgV58os5/v01rh0UBXHdZRyoscC', enabled=true, authorities=[com.example.document.entity.Authority@2cca1396], firstname='admin', lastname='admin', email='adminas@mail.ru'}
+2020-07-20 14:05:08.272 DEBUG 10216 --- [http-nio-8080-exec-10] c.e.document.controller.UserController   : IN saveUs - User successfuly saved admin
+2020-07-20 14:05:08.278  INFO 10216 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:08.281  INFO 10216 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:08.282  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:05:08.285  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:05:08.286  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:05:08.287 DEBUG 10216 --- [http-nio-8080-exec-7] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 14:05:26.637  INFO 10216 --- [http-nio-8080-exec-8] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:26.642  INFO 10216 --- [http-nio-8080-exec-8] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:26.652  INFO 10216 --- [http-nio-8080-exec-8] c.example.document.service.UserService   : IN searchUsersByName User found by name 
+2020-07-20 14:05:26.653  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.FolderService       : IN quantityOfPackages - 3 documents found by username admin
+2020-07-20 14:05:26.654  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.FolderService       : IN quantityOfFolders - 3 documents found by username admin
+2020-07-20 14:05:26.655  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.DocumentService     : IN quantityOfDocuments - 1 documents found by username admin
+2020-07-20 14:05:26.656 DEBUG 10216 --- [http-nio-8080-exec-8] c.e.document.controller.MainController   : IN search - found users 9
+2020-07-20 14:05:29.443  INFO 10216 --- [http-nio-8080-exec-9] c.example.document.service.UserService   : IN getUserById User found by name keks
+2020-07-20 14:05:29.446  INFO 10216 --- [http-nio-8080-exec-9] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:29.448  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.DocumentService     : IN getDocumentsByName - keks documents found by Username
+2020-07-20 14:05:29.450  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderByAccessAndNoPackage List of folders found by - username keks, and access fpublic, quantity []
+2020-07-20 14:05:29.452  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderByAccess List of folders found by - access fprivate, username keks, quantity 0
+2020-07-20 14:05:29.453  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN quantityOfPackages - 0 documents found by username keks
+2020-07-20 14:05:29.455  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN quantityOfFolders - 0 documents found by username keks
+2020-07-20 14:05:29.456  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.DocumentService     : IN quantityOfDocuments - 0 documents found by username keks
+2020-07-20 14:05:29.457 DEBUG 10216 --- [http-nio-8080-exec-9] c.e.document.controller.UserController   : IN getUserById - tracked User by name keks
+2020-07-20 14:05:35.765  INFO 10216 --- [http-nio-8080-exec-2] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:35.768  INFO 10216 --- [http-nio-8080-exec-2] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:35.774  INFO 10216 --- [http-nio-8080-exec-2] c.example.document.service.UserService   : IN searchUsersByName User found by name 
+2020-07-20 14:05:35.774  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.service.FolderService       : IN quantityOfPackages - 3 documents found by username admin
+2020-07-20 14:05:35.776  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.service.FolderService       : IN quantityOfFolders - 3 documents found by username admin
+2020-07-20 14:05:35.777  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.service.DocumentService     : IN quantityOfDocuments - 1 documents found by username admin
+2020-07-20 14:05:35.778 DEBUG 10216 --- [http-nio-8080-exec-2] c.e.document.controller.MainController   : IN search - found users 9
+2020-07-20 14:05:42.782  INFO 10216 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getUserById User found by name tester
+2020-07-20 14:05:42.786  INFO 10216 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:42.789  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.DocumentService     : IN getDocumentsByName - tester documents found by Username
+2020-07-20 14:05:42.793  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderByAccessAndNoPackage List of folders found by - username tester, and access fpublic, quantity [Folder{id=31, name='null', username='tester', folderAccess='fpublic', packagename='null', creationDate=2020-07-20 11:58:27.182}, Folder{id=32, name='bustereditedbyadmin', username='tester', folderAccess='fpublic', packagename='null', creationDate=2020-07-20 19:08:11.0}]
+2020-07-20 14:05:42.795  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderByAccess List of folders found by - access fprivate, username tester, quantity 1
+2020-07-20 14:05:42.796  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN quantityOfPackages - 2 documents found by username tester
+2020-07-20 14:05:42.798  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN quantityOfFolders - 1 documents found by username tester
+2020-07-20 14:05:42.800  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.DocumentService     : IN quantityOfDocuments - 2 documents found by username tester
+2020-07-20 14:05:42.801 DEBUG 10216 --- [http-nio-8080-exec-7] c.e.document.controller.UserController   : IN getUserById - tracked User by name tester
+2020-07-20 14:05:59.962  INFO 10216 --- [http-nio-8080-exec-2] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:59.965  INFO 10216 --- [http-nio-8080-exec-2] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:05:59.966  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:05:59.971  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:05:59.973  INFO 10216 --- [http-nio-8080-exec-2] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:05:59.974 DEBUG 10216 --- [http-nio-8080-exec-2] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 14:06:02.877  INFO 10216 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:02.882  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:02.883  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:02.885  INFO 10216 --- [http-nio-8080-exec-4] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:02.886  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:02.889  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.DocumentService     : IN getDocumentsByFolderA - 1 documents found by Folder
+2020-07-20 14:06:02.890  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:02.892  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolderByPackage List of folders found by - packagename Basic Package, username admin, quantity 3
+2020-07-20 14:06:02.893  INFO 10216 --- [http-nio-8080-exec-4] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:02.895 DEBUG 10216 --- [http-nio-8080-exec-4] c.e.d.controller.FolderController        : IN getFolderById -  visited folder Basic Package
+2020-07-20 14:06:06.382  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:06.385  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:06.386  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:06.387  INFO 10216 --- [http-nio-8080-exec-10] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:06.388  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:06.389  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:06.391  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.service.DocumentService     : IN saveDocument - com.example.document.entity.Document@2f505bde document saved succesfully 
+2020-07-20 14:06:06.406 DEBUG 10216 --- [http-nio-8080-exec-10] c.e.d.controller.FolderController        : IN uploadFile -  file successfully uploaded 1--.txt
+2020-07-20 14:06:06.414  INFO 10216 --- [http-nio-8080-exec-9] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:06.417  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:06.418  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:06.419  INFO 10216 --- [http-nio-8080-exec-9] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:06.421  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:06.425  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.DocumentService     : IN getDocumentsByFolderA - 2 documents found by Folder
+2020-07-20 14:06:06.426  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:06.429  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderByPackage List of folders found by - packagename Basic Package, username admin, quantity 3
+2020-07-20 14:06:06.431  INFO 10216 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:06.433 DEBUG 10216 --- [http-nio-8080-exec-9] c.e.d.controller.FolderController        : IN getFolderById -  visited folder Basic Package
+2020-07-20 14:06:31.063  INFO 10216 --- [http-nio-8080-exec-6] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:31.067  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:31.068  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:31.070  INFO 10216 --- [http-nio-8080-exec-6] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:31.072  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:31.072  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:31.074  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.DocumentService     : IN saveDocument - com.example.document.entity.Document@23df98e5 document saved succesfully 
+2020-07-20 14:06:31.083 DEBUG 10216 --- [http-nio-8080-exec-6] c.e.d.controller.FolderController        : IN uploadFile -  file successfully uploaded 3--.txt
+2020-07-20 14:06:31.087  INFO 10216 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:31.091  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:06:31.092  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:31.093  INFO 10216 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:06:31.094  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:31.099  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.DocumentService     : IN getDocumentsByFolderA - 3 documents found by Folder
+2020-07-20 14:06:31.100  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:31.103  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderByPackage List of folders found by - packagename Basic Package, username admin, quantity 3
+2020-07-20 14:06:31.105  INFO 10216 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolderById Folder found by - id 19
+2020-07-20 14:06:31.106 DEBUG 10216 --- [http-nio-8080-exec-7] c.e.d.controller.FolderController        : IN getFolderById -  visited folder Basic Package
+2020-07-20 14:06:57.333 DEBUG 10216 --- [http-nio-8080-exec-5] c.e.document.controller.FileController   : IN downloadFileFromLocal -  download success  3--.txt
+2020-07-20 14:06:57.338  INFO 10216 --- [http-nio-8080-exec-5] c.e.document.service.DocumentService     : IN getResponseEntity - URL [file:/C:/files/3--.txt] getResponseEntity request
+2020-07-20 14:07:14.473 DEBUG 10216 --- [http-nio-8080-exec-8] c.e.document.controller.FileController   : IN deleteFile -  delete success  3--.txt
+2020-07-20 14:07:14.480  INFO 10216 --- [http-nio-8080-exec-8] c.e.document.service.DocumentService     : IN deleteFile - 3--.txt File successfully deleted
+2020-07-20 14:07:14.498  INFO 10216 --- [http-nio-8080-exec-6] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:07:14.500  INFO 10216 --- [http-nio-8080-exec-6] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:07:14.501  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:07:14.503  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:07:14.505  INFO 10216 --- [http-nio-8080-exec-6] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:07:14.505 DEBUG 10216 --- [http-nio-8080-exec-6] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 14:07:35.368  INFO 10216 --- [http-nio-8080-exec-5] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:07:35.403  INFO 10216 --- [http-nio-8080-exec-10] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:07:35.412  INFO 10216 --- [http-nio-8080-exec-3] c.e.document.controller.UserController   : IN login - visited LoginPage
+2020-07-20 14:07:54.896  INFO 13452 --- [restartedMain] c.example.document.DocumentApplication   : Starting DocumentApplication on DESKTOP-NFMOMHD with PID 13452 (C:\Users\nemes\Desktop\SpringBootDocumentSystem\target\classes started by nemes in C:\Users\nemes\Desktop\SpringBootDocumentSystem)
+2020-07-20 14:07:54.899 DEBUG 13452 --- [restartedMain] c.example.document.DocumentApplication   : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-07-20 14:07:54.899  INFO 13452 --- [restartedMain] c.example.document.DocumentApplication   : No active profile set, falling back to default profiles: default
+2020-07-20 14:07:58.778  INFO 13452 --- [restartedMain] c.example.document.DocumentApplication   : Started DocumentApplication in 4.173 seconds (JVM running for 4.896)
+2020-07-20 14:08:02.747  INFO 13452 --- [http-nio-8080-exec-1] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 14:08:03.013  INFO 13452 --- [http-nio-8080-exec-5] c.e.document.controller.MainController   : IN HomePage - visited Landing Page
+2020-07-20 14:08:14.653  INFO 13452 --- [http-nio-8080-exec-9] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:08:14.693  INFO 13452 --- [http-nio-8080-exec-9] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:08:14.698  INFO 13452 --- [http-nio-8080-exec-9] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:08:14.710  INFO 13452 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:08:14.713  INFO 13452 --- [http-nio-8080-exec-9] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:08:14.714 DEBUG 13452 --- [http-nio-8080-exec-9] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin
+2020-07-20 14:09:01.252  INFO 13452 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:09:01.256  INFO 13452 --- [http-nio-8080-exec-7] c.example.document.service.UserService   : IN getCurrentLoggedUser current User is admin
+2020-07-20 14:09:01.258  INFO 13452 --- [http-nio-8080-exec-7] c.e.document.service.DocumentService     : IN getDocuments - admin documents found by Username
+2020-07-20 14:09:01.265  INFO 13452 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFoldersWithNoPackage1 List of folders found by - username admin, quantity 3
+2020-07-20 14:09:01.268  INFO 13452 --- [http-nio-8080-exec-7] c.e.document.service.FolderService       : IN getFolders Folders found by User - admin, quantity - 6
+2020-07-20 14:09:01.270 DEBUG 13452 --- [http-nio-8080-exec-7] c.e.document.controller.UserController   : IN getMyProfile - visited myprofile page admin

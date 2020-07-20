@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<style>
+    a {
+        color: #741c7c;
+        font-weight: 500;
+        -webkit-transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        display: inline-block;
+        text-decoration:none;
+        position: relative;
+    }
+
+    a:hover{
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    a::before {
+        position: absolute;
+        top: -2px;
+        left: -7px;
+        box-sizing: content-box;
+        padding: 0 5px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid whitesmoke;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+        transition: opacity 0.2s, transform 0.2s;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    a:hover::before{
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+</style>
+<head>
+
+    <title>MyProfile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <link href="../static/styles/bootstrap.min.css" th:href="@{/styles/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link href="../static/styles/font-awesome.min.css" th:href="@{/styles/font-awesome.min.css}" rel="stylesheet" />
+    <!-- adminpro icon CSS
+        ============================================ -->
+    <link href="../static/styles/adminpro-custon-icon.css" th:href="@{/styles/adminpro-custon-icon.css}" rel="stylesheet"/>
+    <!-- meanmenu icon CSS
+        ============================================ -->
+    <link href="../static/styles/meanmenu.min.css" th:href="@{/styles/meanmenu.min.css}" rel="stylesheet"/>
+    <!-- mCustomScrollbar CSS
+        ============================================ -->
+    <link href="../static/styles/jquery.mCustomScrollbar.min.css" th:href="@{/styles/jquery.mCustomScrollbar.min.css}"/>
+    <link href="../static/styles/all-type-forms.css" th:href="@{/styles/all-type-forms.css}"/>
+    <!-- animate CSS
+        ============================================ -->
+    <link href="../static/styles/animate.css" th:href="@{/styles/animate.css}" rel="stylesheet"/>
+    <!-- normalize CSS
+        ============================================ -->
+    <link href="../static/styles/normalize.css" th:href="@{/styles/normalize.css}" rel="stylesheet"/>
+    <!-- form CSS
+        ============================================ -->
+    <link href="../static/styles/form.css" th:href="@{/styles/form.css}" rel="stylesheet"/>
+    <!-- style CSS
+        ============================================ -->
+    <link href="../static/styles/style.css" th:href="@{/styles/style.css}" rel="stylesheet"/>
+    <link href="../static/styles/modals.css" th:href="@{/styles/modals.css}" rel="stylesheet"/>
+    <link href="../static/styles/responsive.css.css" th:href="@{/styles/responsive.css}" rel="stylesheet"/>
+    <!-- responsive CSS
+        ============================================ -->
+    <link  href="..static/styles/bootstrap-table.css" th:href="@{/styles/bootstrap-table.css}"  rel="stylesheet"/>
+    <link href="..static/styles/bootstrap-editable.css" th:href="@{/styles/bootstrap-editable.css}"  rel="stylesheet"/>
+
+    <link href="../static/styles/summernote.css" th:href="@{/styles/summernote.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/dropzone.css" th:href="@{/styles/dropzone.css}"  rel="stylesheet"/>
+    <!-- charts CSS
+        ============================================ -->
+    <link  href="../static/styles/c3.min.css" th:href="@{/styles/c3.min.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/all.css" type="text/css" media="all" th:href="@{/styles/all.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/styleforhome.css" type="text/css" media="all" th:href="@{/styles/styleforhome.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/slick.css" type="text/css" media="all" th:href="@{/styles/slick.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/magnific-popup.css" type="text/css" media="all" th:href="@{/styles/magnific-popup.css}"  rel="stylesheet"/>
+    <script  type="text/javascript" th:src="@{/js/actions.js}" src="../static/js/modernizr-2.8.3.min.js"></script>
+</head>
+<style>
+    .loader-body{width:100%;height:100vh;background-color:#000;position:fixed;z-index:2;visibility:visible;top:0;left:0;text-align:center;justify-content:center;align-content:center;transition:.5s all}.loader{width:100px;height:100px;border:12px solid #fff;border-radius:50%;position:absolute;
+                                                                                                                                                                                                             /*change color of border*/ border-top-color:red;transform:translate(-50%,-50%);top:50%;left:50%;-webkit-animation:1s spin infinite linear;-o-animation:1s spin infinite linear;animation:1s spin infinite linear}.loader-body.done{visibility:hidden;opacity:0}@keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+</style>
+<body class="darklayout">
+<div class="loader-body" id="loader">
+    <div class="loader"></div>
+</div>
+<script>
+
+    document.body.onload = function(){
+        setTimeout(function() {
+            var preloader = document.getElementById('loader');
+            if( !preloader.classList.contains('done') )
+            {
+                preloader.classList.add('done');
+            }
+        }, 1000)
+    }
+</script>
+<div class="wrapper-pro">
+    <div class="wrapper-pro">
+        <div class="left-sidebar-pro">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <a href="/myprofile"><h3 th:text="${user.firstname}"></h3>
+                        <h3 th:text="${user.lastname}"></h3> </a>
+                </div>
+                <form th:object="${search}" th:action="@{/search}" th:method="get">
+                    <input th:value="${search}" class="form-control mr-sm-2" style="width: 80%" type="search" placeholder="Search" aria-label="Search" id="search" name="search">
+                    <button type="submit" class="btn btn-primary active" id="btnsearch" style="background: deepskyblue; width: 100%"> Search </button>
+                </form>
+                <style>
+                    #btnsearch{
+                        color: #741c7c;
+                        font-weight: 500;
+                        -webkit-transition: -webkit-transform 0.2s;
+                        transition: transform 0.2s;
+                        display: inline-block;
+                        text-decoration:none;
+                        position: relative;
+                    }
+                    #btnsearch:hover{
+                        -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
+                    }
+                    #btnsearch::before{
+                        position: absolute;
+                        top: -2px;
+                        left: -7px;
+                        box-sizing: content-box;
+                        padding: 0 5px;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid whitesmoke;
+                        content: '';
+                        opacity: 0;
+                        -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+                        transition: opacity 0.2s, transform 0.2s;
+                        -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
+                    }
+                    #btnsearch:hover::before{
+                        opacity: 1;
+                        -webkit-transform: scale(1.2);
+                        transform: scale(1.2);
+                    }
+
+                </style>
+
+                <div class="left-custom-menu-adp-wrap">
+                    <ul class="nav navbar-nav left-sidebar-menu-pro">
+                        <li class="nav-item" style="padding-top: 15%">
+                            <a href="/settings"  role="button" aria-expanded="false" ><span class="mini-dn">Settings</span> <span class="indicator-right-menu mini-dn"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="left-custom-menu-adp-wrap" >
+                    <ul class="nav navbar-nav left-sidebar-menu-pro">
+                        <li class="nav-item" style="padding-top: 120%">
+                            <!-- <form action="#" th:action="@{/logout}" method="post"> -->
+                            <!--  <input class="btn btn-outline-warning" type="submit" value="Log out" /> -->
+                            <a th:href="@{/logout}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Log Out</a>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </nav>
+        </div>
+        <!-- Header top area start-->
+        <div class="content-inner-all">
+
+            <div class="breadcome-area mg-b-30 small-dn">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcome-list shadow-reset">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="breadcome-heading">
+                                            <h2>Welcome To File Service</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="/myprofile">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div align="center">
+    <div class="login-form-area mg-t-30 mg-b-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3"></div>
+
+                <div class="col-lg-6">
+                    <div class="login-bg">
+                        <form th:action="@{/save}" th:object="${user}" th:method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="logo">
+                                        <a href="#"><img src="img/logo/log.png" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="login-title">
+                                        <h1>Edit Form</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Full Name</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="login-input-area register-mg-rt">
+                                                <input type="text" name="firstname" required th:field="*{firstname}" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="login-input-area">
+                                                <input type="text" name="lastname" required th:field="*{lastname}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Username</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="text" name="name" required th:field="*{username}" readonly/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Email Address</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="email" name="email" required th:field="*{email}"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Password</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="password" name="password" required th:field="*{password}" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="login-input-head">
+                                        <p>Confirm Password</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="login-input-area">
+                                        <input type="password" name="confarm_password" required th:field="*{repeatedPassword}"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4"></div>
+                                <div class="col-lg-8">
+                                    <div class="login-button-pro">
+                                        <button   type="submit" class="login-button login-button-lg" style="text-align: center">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"></div>
+
+            </div>
+            <footer class="footer_part">
+
+
+                <hr>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="copyright_text">
+                            <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </footer>
+        </div>
+    </div>
+    <!-- Register End-->
+
+
+</body>
+
+</html>

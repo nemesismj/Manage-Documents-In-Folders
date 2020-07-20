@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" >
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <style>
+        .stroke {
+            -webkit-text-stroke: 1px black;
+            color: white;
+            text-shadow: 1px 1px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{/filesOverview.html}" method="post" enctype="multipart/form-data" class="m-5 center">
+    <div class="custom-file" style="width: inherit">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" name="file" accept="application/pdf,.txt" required>
+        <label class="custom-file-label" for="validatedCustomFile">Select File For Upload...</label>
+        <div class="invalid-feedback">Please Select File</div>
+    </div>
+    <!--    <input class="btn btn-secondary" type="file" value="Browse" name="file" accept="application/pdf,.txt">-->
+    <input class="btn btn-outline-primary" type="submit" value="Upload">
+</form>
+<div class="panel panel-default rounded m-5">
+    <H1 class="text-center text-white" style="text-shadow: black 0.1em 0.1em 0.2em;">Available Documents</H1>
+    <table id="dtBasicExample" class="table  table-bordered table-sm rounded" width="100%">
+        <thead >
+        <tr class="bg-primary text-white rounded">
+            <th>S/N</th>
+            <th>file Descriptions</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="rounded" th:each="file,iter : ${documents}">
+            <td th:text="${iter.index+1}">1</td>
+            <td th:object="${file}">
+                <p class="m-0" th:utext="'<b>File Name:</b> ' + *{fileName}">File Name: </p>
+                <p class="m-0" th:utext="'<b>File Type:</b> ' + *{fileType}">File Type: </p>
+                <p class="m-0" th:utext="'<b>File Uploader:</b> ' + *{userUploader}">File Uploader: </p>
+                <p class="m-0" th:utext="'<b>Uploaded On:</b> ' + *{#dates.format(insertionDate, 'yyyy-MM-dd HH:mm')} ">Uploaded On: </p>
+            </td>
+            <td>
+                <a class="btn btn-primary m-1" th:href="@{'/download/' + ${file.fileName}}">Download</a>
+                <form style="display: inline" th:action="@{'/delete/' + ${file.fileName}}" action="https://google.com">
+                    <input th:id="'deleteBtn'+${iter.index+1}" class="btn btn-danger m-1" type="submit" value="Delete" disabled/>
+                </form>
+                <!--                <button  th:id="'deleteBtn'+${iter.index+1}" class="btn btn-danger m-1" th:href="@{'/delete/' + ${file.getFileName()}}"  disabled="disabled">Delete</button>-->
+                <br>
+                <input class="m-1" type="checkbox" th:text="'Check this for delete'" th:onchange="'showHide(\'' + 'deleteBtn'+${iter.index+1} + '\');'"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function showHide(buttonId) {
+        document.getElementById(buttonId).disabled=!document.getElementById(buttonId).disabled;
+    }
+    $(document).ready(function() {
+        $('#dtBasicExample').DataTable();
+    } );
+</script>
+</body>
+</html>

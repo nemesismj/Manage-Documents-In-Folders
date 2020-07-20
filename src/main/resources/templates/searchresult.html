@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+    a {
+        color: #741c7c;
+        font-weight: 500;
+        -webkit-transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        display: inline-block;
+        text-decoration:none;
+        position: relative;
+    }
+
+    a:hover{
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    a::before {
+        position: absolute;
+        top: -2px;
+        left: -7px;
+        box-sizing: content-box;
+        padding: 0 5px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid whitesmoke;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+        transition: opacity 0.2s, transform 0.2s;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    a:hover::before{
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+</style>
+<head>
+
+    <title>Search results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <link href="../static/styles/bootstrap.min.css" th:href="@{/styles/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link href="../static/styles/font-awesome.min.css" th:href="@{/styles/font-awesome.min.css}" rel="stylesheet" />
+    <!-- adminpro icon CSS
+        ============================================ -->
+    <link href="../static/styles/adminpro-custon-icon.css" th:href="@{/styles/adminpro-custon-icon.css}" rel="stylesheet"/>
+    <!-- meanmenu icon CSS
+        ============================================ -->
+    <link href="../static/styles/meanmenu.min.css" th:href="@{/styles/meanmenu.min.css}" rel="stylesheet"/>
+    <!-- mCustomScrollbar CSS
+        ============================================ -->
+    <link href="../static/styles/jquery.mCustomScrollbar.min.css" th:href="@{/styles/jquery.mCustomScrollbar.min.css}"/>
+    <link href="../static/styles/all-type-forms.css" th:href="@{/styles/all-type-forms.css}"/>
+    <!-- animate CSS
+        ============================================ -->
+    <link href="../static/styles/animate.css" th:href="@{/styles/animate.css}" rel="stylesheet"/>
+    <!-- normalize CSS
+        ============================================ -->
+    <link href="../static/styles/normalize.css" th:href="@{/styles/normalize.css}" rel="stylesheet"/>
+    <!-- form CSS
+        ============================================ -->
+    <link href="../static/styles/form.css" th:href="@{/styles/form.css}" rel="stylesheet"/>
+    <!-- style CSS
+        ============================================ -->
+    <link href="../static/styles/style.css" th:href="@{/styles/style.css}" rel="stylesheet"/>
+    <link href="../static/styles/modals.css" th:href="@{/styles/modals.css}" rel="stylesheet"/>
+    <link href="../static/styles/responsive.css.css" th:href="@{/styles/responsive.css}" rel="stylesheet"/>
+    <!-- responsive CSS
+        ============================================ -->
+    <link  href="..static/styles/bootstrap-table.css" th:href="@{/styles/bootstrap-table.css}"  rel="stylesheet"/>
+    <link href="..static/styles/bootstrap-editable.css" th:href="@{/styles/bootstrap-editable.css}"  rel="stylesheet"/>
+
+    <link href="../static/styles/summernote.css" th:href="@{/styles/summernote.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/dropzone.css" th:href="@{/styles/dropzone.css}"  rel="stylesheet"/>
+    <!-- charts CSS
+        ============================================ -->
+    <link  href="../static/styles/c3.min.css" th:href="@{/styles/c3.min.css}"  rel="stylesheet"/>
+
+
+    <link  href="../static/styles/all.css" type="text/css" media="all" th:href="@{/styles/all.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/styleforhome.css" type="text/css" media="all" th:href="@{/styles/styleforhome.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/slick.css" type="text/css" media="all" th:href="@{/styles/slick.css}"  rel="stylesheet"/>
+    <link  href="../static/styles/magnific-popup.css" type="text/css" media="all" th:href="@{/styles/magnific-popup.css}"  rel="stylesheet"/>
+    <script  type="text/javascript" th:src="@{/js/actions.js}" src="../static/js/modernizr-2.8.3.min.js"></script>
+</head>
+<style>
+    .loader-body{width:100%;height:100vh;background-color:#000;position:fixed;z-index:2;visibility:visible;top:0;left:0;text-align:center;justify-content:center;align-content:center;transition:.5s all}.loader{width:100px;height:100px;border:12px solid #fff;border-radius:50%;position:absolute;
+                                                                                                                                                                                                             /*change color of border*/ border-top-color:red;transform:translate(-50%,-50%);top:50%;left:50%;-webkit-animation:1s spin infinite linear;-o-animation:1s spin infinite linear;animation:1s spin infinite linear}.loader-body.done{visibility:hidden;opacity:0}@keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+</style>
+<body class="darklayout">
+<div class="loader-body" id="loader">
+    <div class="loader"></div>
+</div>
+<script>
+
+    document.body.onload = function(){
+        setTimeout(function() {
+            var preloader = document.getElementById('loader');
+            if( !preloader.classList.contains('done') )
+            {
+                preloader.classList.add('done');
+            }
+        }, 1000)
+    }
+</script>
+<div class="wrapper-pro">
+        <div class="left-sidebar-pro">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <a href="/myprofile"><h3 th:text="${curuser.firstname}"></h3>
+                        <h3 th:text="${curuser.lastname}"></h3> </a>
+                </div>
+                <form th:object="${search}" th:action="@{/search}" th:method="get">
+                    <input th:value="${search}" class="form-control mr-sm-2" style="width: 80%" type="search" placeholder="Search" aria-label="Search" id="search" name="search">
+                    <button type="submit" class="btn btn-primary active" id="btnsearch" style="background: deepskyblue; width: 100%"> Search </button>
+                </form>
+                <style>
+                    #btnsearch{
+                        color: #741c7c;
+                        font-weight: 500;
+                        -webkit-transition: -webkit-transform 0.2s;
+                        transition: transform 0.2s;
+                        display: inline-block;
+                        text-decoration:none;
+                        position: relative;
+                    }
+                    #btnsearch:hover{
+                        -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
+                    }
+                    #btnsearch::before{
+                        position: absolute;
+                        top: -2px;
+                        left: -7px;
+                        box-sizing: content-box;
+                        padding: 0 5px;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid whitesmoke;
+                        content: '';
+                        opacity: 0;
+                        -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+                        transition: opacity 0.2s, transform 0.2s;
+                        -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
+                    }
+                    #btnsearch:hover::before{
+                        opacity: 1;
+                        -webkit-transform: scale(1.2);
+                        transform: scale(1.2);
+                    }
+
+                </style>
+
+
+                <div class="left-custom-menu-adp-wrap">
+                    <ul class="nav navbar-nav left-sidebar-menu-pro">
+                        <li class="nav-item" style="padding-top: 15%">
+                            <a href="/settings"  role="button" aria-expanded="false" ><span class="mini-dn">Settings</span> <span class="indicator-right-menu mini-dn"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="left-custom-menu-adp-wrap" >
+                    <ul class="nav navbar-nav left-sidebar-menu-pro">
+                        <li class="nav-item" style="padding-top: 120%">
+                            <!-- <form action="#" th:action="@{/logout}" method="post"> -->
+                            <!--  <input class="btn btn-outline-warning" type="submit" value="Log out" /> -->
+                            <a th:href="@{/logout}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Log Out</a>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </nav>
+        </div>
+        <!-- Header top area start-->
+        <div class="content-inner-all">
+
+                    <div class="breadcome-area mg-b-30 small-dn">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="breadcome-list shadow-reset">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="breadcome-heading">
+                                                    <h2>Welcome To File Service</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <ul class="breadcome-menu">
+                                                    <li><a href="/myprofile">Home</a> <span class="bread-slash">/</span>
+                                                    </li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inbox-mailbox-area mg-b-40" >
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                            <div class="inbox-email-menu-list shadow-reset">
+                                                <div class="compose-email">
+                                                </div>
+                                                <h4 class="Inbox-category-ad" style="color: whitesmoke">The Users</h4>
+                                                <div class="chip" th:each="user : ${user}">
+                                                    <ul class="nav nav-tabs">
+                                                        <a th:href="@{'/user/' + ${user.username} + '/'}"> <img src="/img/man.png"  width="52" height="52" style="padding: 5px"><span th:text="${user.username}" style="font-size:large"></span></a>
+                                                    </ul >
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="tab-content">
+                                                <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
+                                                    <div class="datatable-dashv1-list custom-datatable-overright">
+                                                        <div class="mail-title inbox-bt-mg">
+                                                            <h2>Be with us</h2>
+                                                            <h3>Your Account Details </h3>
+                                                        </div><br><br>
+                                                        <div class="container">
+
+                                                        </div>
+                                                        <div class="user-profile-area">
+                                                            <div class="container-fluid">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                        <div class="user-profile-wrap shadow-reset">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-6">
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-9">
+                                                                                            <div class="user-profile-content">
+                                                                                                <h2 th:text="${curuser.firstname}"></h2>
+                                                                                                <h2 th:text="${curuser.lastname}"></h2>
+                                                                                                </p>
+                                                                                                <p class="profile-des">It is a long established fact that a reader will be distracted of by the readable content of a page when looking at its layout.The point of using Lorem Ipsum.</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-lg-3">
+                                                                                    <div class="user-profile-social-list">
+                                                                                        <table class="table small m-b-xs">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <strong th:text="${quantitypackages}"></strong> Packages
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <strong th:text="${quantityfolders}"></strong> Folders
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <strong th:if="${quantitydocuments.equals(0)}" th:unless="${quantitydocuments.equals(0)}"> 0</strong>
+                                                                                                    <strong th:text="${quantitydocuments}"></strong>  Documents
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+<script type="text/javascript" th:src="@{/js/jquery.counterup.min.js}"  src="../static/js/jquery.counterup.min.js"></script>
+<script type="text/javascript" th:src="@{/js/waypoints.min.js}"  src="../static/js/waypoints.min.js"></script>
+<!-- map JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/bootstrap-table.js}"  src="../static/js/bootstrap-table.js"></script>
+<script type="text/javascript" th:src="@{/js/tableExport.js}"  src="../static/js/tableExport.js"></script>
+<script type="text/javascript" th:src="@{/js/data-table-active.js}" src="../static/js/data-table-active.js"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap-table-editable.js}" src="../static/js/bootstrap-table-editable.js"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap-editable.js}" src="../static/js/bootstrap-editable.js"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap-table-resizable.js}" src="../static/js/bootstrap-table-resizable.js"></script>
+<script type="text/javascript" th:src="@{/js/colResizable-1.5.source.js}" src="../static/js/colResizable-1.5.source.js"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap-table-export.js}" src="../static/js/bootstrap-table-export.js"></script>
+<!--  dropzone JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/dropzone.js}" src="../static/js/dropzone.js"></script>
+<!-- multiple email JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/multiple-email-active.js}" src="../static/js/multiple-email-active.js"></script>
+<!-- summernote JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/summernote.min.js}" src="../static/js/summernote.min.js"></script>
+<script type="text/javascript" th:src="@{/js/summernote-active.js}" src="../static/js/summernote-active.js"></script>
+
+
+
+
+
+
+
+<!-- jquery
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/jquery-1.11.3.min.js}" src="../static/js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/jquery.meanmenu.js}" src="../static/js/jquery.meanmenu.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/jquery.mCustomScrollbar.concat.min.js}" src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- sticky JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/jquery.sticky.js}" src="../static/js/jquery.sticky.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/jquery.scrollUp.min.js}" src="../static/js/jquery.scrollUp.min.js"></script>
+<!-- form validate JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/jquery.form.min.js}" src="../static/js/jquery.form.min.js"></script>
+<script type="text/javascript" th:src="@{/js/jquery.validate.min.js}" src="../static/js/jquery.validate.min.js"></script>
+<script type="text/javascript" th:src="@{/js/form-active.js}" src="../static/js/form-active.js"></script>
+<!-- main JS
+    ============================================ -->
+<script type="text/javascript" th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+</div>
+
+</body>
+<style>
+    footer {
+        position: absolute;
+        width: 83%;
+        bottom: 0;
+    }
+</style>
+</html>
